@@ -1,8 +1,3 @@
-### Technologies Used
-1. React, TypeScript, Vite, Material-UI (MUI) 
-2. .NET 8 / ASP.NET Core Web API
-3. Node.js, npm
-
 ### Getting Started
 #### Frontend
 1. Navigate to the frontend directory: (cd StewardIQAssessment/frontend)
@@ -21,3 +16,8 @@ During this assessment, AI was used in the following areas:
 1. Troubleshooting and resolving Vite proxy issues
 2. Ensuring the frontend correctly communicates with the backend API.
 3. Creating structured components with TypeScript and MUI.
+
+### Technologies Used
+1. React, TypeScript, Vite, Material-UI (MUI) 
+2. .NET 8 / ASP.NET Core Web API
+3. Node.js, npm
