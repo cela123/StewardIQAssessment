@@ -1,11 +1,11 @@
 ### Getting Started
-##### Frontend
+#### Frontend
 1. Navigate to the frontend directory: (cd StewardIQAssessment/frontend)
 2. Install dependencies: npm install
 3. Start the development server: npm run dev
 4. The frontend will run at: http://localhost:5173.
 
-##### Backend
+#### Backend
 1. Open the solution in your IDE (e.g., Visual Studio).
 2. Set StewardIQAssessment.Api as the startup project.
 3. Run the project (F5 or Start Debugging).
