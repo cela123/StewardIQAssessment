@@ -2,7 +2,8 @@
 This project demonstrates a full-stack application with a React + Vite frontend and a .NET backend API. It showcases the ability to create modular, maintainable components with TypeScript and Material-UI (MUI), as well as handle API integration and filtering.
 
 ### Technologies Used
-Frontend: React, TypeScript, Vite, Material-UI (MUI) Backend: .NET 8 / ASP.NET Core Web API Other: Node.js, npm
+Frontend: React, TypeScript, Vite, Material-UI (MUI) 
+Backend: .NET 8 / ASP.NET Core Web API Other: Node.js, npm
 
 ### Getting Started
 #### Frontend
