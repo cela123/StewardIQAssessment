@@ -5,7 +5,7 @@ This project demonstrates a full-stack application with a React + Vite frontend 
 Frontend: React, TypeScript, Vite, Material-UI (MUI) Backend: .NET 8 / ASP.NET Core Web API Other: Node.js, npm
 
 ### Getting Started
-####Frontend
+#### Frontend
 Navigate to the frontend directory: (cd StewardIQAssessment/frontend)
 Install dependencies: npm install
 Start the development server: npm run dev
