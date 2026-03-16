@@ -5,7 +5,7 @@ namespace StewardIQAssessment.Api.Mappers
 {
     public class DataSetMapper : IDataSetMapper
     {
-        public DataSet MapRequestDataSetDTO(DataSetDTO dataSet)
+        public DataSet MapRequestToDataSet(DataSetDTO dataSet)
         {
             return new DataSet
             {

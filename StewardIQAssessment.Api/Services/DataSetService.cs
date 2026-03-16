@@ -19,17 +19,7 @@ namespace StewardIQAssessment.Api.Services
 
         public async Task AddDataSet(DataSet data)
         {
-            var dataSet = new DataSet
-            {
-                Id = Guid.NewGuid(),
-                Name = data.Name,
-                Domain = data.Domain,
-                Owner = data.Owner,
-                QualityScore = data.QualityScore,
-                Status = data.Status
-            };
-
-            await _repo.AddAsync(dataSet);
+            await _repo.AddAsync(data);
         }
 
         public async Task DeleteDataSet(Guid id)

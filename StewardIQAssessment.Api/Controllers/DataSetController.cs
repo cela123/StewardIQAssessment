@@ -26,9 +26,7 @@ public class DataSetController : ControllerBase
     [HttpPost]
     public async Task<IActionResult> Create(DataSetDTO request)
     {
-        DataSet dataSet = _mapper.MapRequestDataSetDTO(request);
-
-        await _service.AddDataSet(dataSet);
+        await _service.AddDataSet(_mapper.MapRequestToDataSet(request));
 
         return Ok();
     }

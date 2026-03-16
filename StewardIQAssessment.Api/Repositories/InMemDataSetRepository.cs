@@ -19,6 +19,11 @@ public class InMemDataSetRepository : IDataSetRepository
 
     public async Task AddAsync(DataSet data)
     {
+        if (data.Id == Guid.Empty)
+        {
+            data.Id = Guid.NewGuid(); 
+        }
+
         _datasets.Add(data);
 
         return;
