@@ -20,6 +20,16 @@ export async function createDataSet(dataSet: CreateDataSet): Promise<void> {
   });
 }
 
+export async function updateDataSet(id: string, dataSet: CreateDataSet): Promise<void> {
+  await fetch(`/api/DataSet/${id}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(dataSet)
+  });
+}
+
 export async function deleteDataSet(id: string): Promise<void> {
   await fetch(`/api/DataSet/${id}`, {
     method: "DELETE"

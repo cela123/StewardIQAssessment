@@ -6,9 +6,10 @@ import { DataSet } from "../models/DataSetModel";
 interface DataSetListItemProps {
   dataset: DataSet;
   onDelete: (id: string) => void;
+  onSelect: (dataSet: DataSet) => void;
 }
 
-const DataSetListItem: React.FC<DataSetListItemProps> = ({ dataset, onDelete }) => {
+const DataSetListItem: React.FC<DataSetListItemProps> = ({ dataset, onDelete, onSelect }) => {
   return (
     <ListItem
       alignItems="flex-start"
@@ -19,6 +20,7 @@ const DataSetListItem: React.FC<DataSetListItemProps> = ({ dataset, onDelete }) 
       }
     >
       <ListItemText
+        onClick={() => onSelect(dataset)}
         primary={`${dataset.name} (${dataset.status})`}
         secondary={
           <>

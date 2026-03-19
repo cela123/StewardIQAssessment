@@ -29,6 +29,19 @@ public class InMemDataSetRepository : IDataSetRepository
         return;
     }
 
+    public async Task UpdateAsync(DataSet data)
+    {
+        var ds = _datasets.Where(d => d.Id == data.Id).FirstOrDefault();
+
+        if (ds != null)
+        {
+            _datasets.Remove(ds);
+            _datasets.Add(data);
+        }
+
+        return;
+    }
+
     public async Task DeleteAsync(Guid id)
     {
         var task = _datasets.FirstOrDefault(t => t.Id == id);

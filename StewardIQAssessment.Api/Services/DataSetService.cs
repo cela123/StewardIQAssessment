@@ -22,6 +22,11 @@ namespace StewardIQAssessment.Api.Services
             await _repo.AddAsync(data);
         }
 
+        public async Task UpdateDataSet(DataSet data)
+        {
+            await _repo.UpdateAsync(data);
+        }
+
         public async Task DeleteDataSet(Guid id)
         {
             await _repo.DeleteAsync(id);

@@ -7,9 +7,10 @@ import DataSetListItem from "./DataSetListItem";
 interface DataSetListProps {
   datasets: DataSet[];
   onDelete: (id: string) => void;
+  onEdit: (dataSet: DataSet) => void;
 }
 
-const DataSetList: React.FC<DataSetListProps> = ({ datasets, onDelete }) => {
+const DataSetList: React.FC<DataSetListProps> = ({ datasets, onDelete, onEdit }) => {
   const [domainFilter, setDomainFilter] = useState("");
   const [statusFilter, setStatusFilter] = useState("");
 
@@ -48,7 +49,7 @@ const DataSetList: React.FC<DataSetListProps> = ({ datasets, onDelete }) => {
         <List>
           {filteredDatasets.map((dataset, index) => (
             <React.Fragment key={dataset.id}>
-              <DataSetListItem dataset={dataset} onDelete={onDelete} />
+              <DataSetListItem dataset={dataset} onDelete={onDelete} onSelect={onEdit}/>
               {index < filteredDatasets.length - 1 && <Divider component="li" />}
             </React.Fragment>
           ))}

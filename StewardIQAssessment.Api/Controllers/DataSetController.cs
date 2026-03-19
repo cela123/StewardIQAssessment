@@ -31,6 +31,15 @@ public class DataSetController : ControllerBase
         return Ok();
     }
 
+    [HttpPut("{id}")]
+    public async Task<IActionResult> Update(Guid id, [FromBody] DataSetDTO request)
+    {
+        var ds = _mapper.MapRequestToDataSet(request);
+        ds.Id = id;
+        await _service.UpdateDataSet(ds);
+        return NoContent();
+    }
+
     [HttpDelete("{id}")]
     public async Task<IActionResult> Delete(Guid id)
     {
